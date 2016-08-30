@@ -1,0 +1,1 @@
+C:\GitHub\SymbolGraph\MC.Agent.PlayGround\bin\Debug\MC.Agent.PlayGround.exe.config
