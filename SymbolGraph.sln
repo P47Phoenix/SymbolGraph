@@ -3,8 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolGraph.Utilities", "SymbolGraph.Utilities\SymbolGraph.Utilities.csproj", "{6D13888D-3CE9-4E73-90F0-54A432F6EC08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolGraph.UtilitiesTests", "SymbolGraph.UtilitiesTests\SymbolGraph.UtilitiesTests.csproj", "{8CB51B69-3367-4404-8625-8CA35C5CF280}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 	EndGlobalSection
 EndGlobal
