@@ -11,11 +11,11 @@ public class ProjectDetail
 
     public List<DocumentDetail> Documents { get; set; } = new();
 
-    public List<MetadataReference> MetadataReferences { get; set; } = new();
+    public List<MetadataReferenceDetail> MetadataReferences { get; set; } = new();
     
-    public List<ProjectReference> ProjectReferences { get; set; } = new();
+    public List<ProjectReferenceDetail> ProjectReferences { get; set; } = new();
     
-    public List<AnalyzerReference> AnalyzerReferences { get; set; } = new();
+    public List<AnalyzerReferenceDetail> AnalyzerReferences { get; set; } = new();
 
     public string AssemblyName { get; set; } = string.Empty;
 

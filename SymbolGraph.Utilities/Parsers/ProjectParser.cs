@@ -39,19 +39,22 @@ public class ProjectParser : IParser<Project, ProjectDetail>
             project.Documents.Add(doc);
         }
         
-        foreach (var projectReferences in item.ProjectReferences)
+        foreach (var projectReference in item.ProjectReferences)
         {
-            
+            var parsedProjectReference = await _projectReferenceParser.ParseAsync(projectReference);
+            project.ProjectReferences.Add(parsedProjectReference);
         }
         
-        foreach (var metadataReferences in item.MetadataReferences)
+        foreach (var metadataReference in item.MetadataReferences)
         {
-            
+            var parsedMetadataReference = await _metadataReferenceParser.ParseAsync(metadataReference);
+            project.MetadataReferences.Add(parsedMetadataReference);
         }
         
-        foreach (var analyzerReferences in item.AnalyzerReferences)
+        foreach (var analyzerReference in item.AnalyzerReferences)
         {
-            
+            var parsedAnalyzerReference = await _analyzerReferenceParser.ParseAsync(analyzerReference);
+            project.AnalyzerReferences.Add(parsedAnalyzerReference);
         }
         return project;
     }
