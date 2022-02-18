@@ -30,12 +30,9 @@ public class DocumentParser : IParser<Document, DocumentDetail>
             var parsedSyntax = await _documentSyntaxParser.ParseAsync(syntaxRoot);
 
             parsedDocumentDetail.Syntax = parsedSyntax;
+            
         }
 
         return parsedDocumentDetail;
     }
-}
-
-public class DocumentSyntax
-{
 }
