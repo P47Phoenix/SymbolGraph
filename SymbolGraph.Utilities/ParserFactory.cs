@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using SymbolGraph.Utilities.Parsers;
 
 namespace SymbolGraph.Utilities;
 

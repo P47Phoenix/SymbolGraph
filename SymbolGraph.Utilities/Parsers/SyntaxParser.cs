@@ -1,7 +1,8 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using SymbolGraph.Utilities.Parsers.Models;
 
-namespace SymbolGraph.Utilities;
+namespace SymbolGraph.Utilities.Parsers;
 
 public class SyntaxParser : IParser<SyntaxNode, DocumentSyntax>
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace SymbolGraph.Utilities;
+namespace SymbolGraph.Utilities.Parsers;
 
 public class AnalyzerReferenceParser : IParser<AnalyzerReference, AnalyzerReferenceDetail>
 {

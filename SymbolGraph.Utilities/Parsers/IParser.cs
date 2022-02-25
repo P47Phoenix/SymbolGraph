@@ -1,4 +1,4 @@
-﻿namespace SymbolGraph.Utilities;
+﻿namespace SymbolGraph.Utilities.Parsers;
 
 public interface IParser<TParse, TResult>
 {

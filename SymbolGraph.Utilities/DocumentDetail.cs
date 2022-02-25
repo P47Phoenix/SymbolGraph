@@ -1,4 +1,5 @@
 ﻿using Microsoft.CodeAnalysis;
+using SymbolGraph.Utilities.Parsers.Models;
 
 namespace SymbolGraph.Utilities;
 

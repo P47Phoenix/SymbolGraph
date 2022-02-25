@@ -1,8 +1,8 @@
-﻿using System.Collections.Concurrent;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
+using SymbolGraph.Utilities.Parsers.Models;
 
-namespace SymbolGraph.Utilities;
+namespace SymbolGraph.Utilities.Parsers;
 
 public class ProjectParser : IParser<Project, ProjectDetail>
 {

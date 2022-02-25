@@ -1,6 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
+using SymbolGraph.Utilities.Parsers.Models;
 
-namespace SymbolGraph.Utilities;
+namespace SymbolGraph.Utilities.Parsers;
 
 public class TokenListParser : IParser<SyntaxTokenList, List<DocumentToken>>
 {

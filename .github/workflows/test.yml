@@ -4,5 +4,7 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Run the Cake script
         uses: cake-build/cake-action@v1
+        

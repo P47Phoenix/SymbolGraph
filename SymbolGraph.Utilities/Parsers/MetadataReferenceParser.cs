@@ -1,7 +1,7 @@
-﻿using System.Collections.Immutable;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
+using SymbolGraph.Utilities.Parsers.Models;
 
-namespace SymbolGraph.Utilities;
+namespace SymbolGraph.Utilities.Parsers;
 
 public class MetadataReferenceParser : IParser<MetadataReference, MetadataReferenceDetail>
 {

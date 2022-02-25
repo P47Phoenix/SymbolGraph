@@ -1,7 +1,7 @@
 ﻿using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 
-namespace SymbolGraph.Utilities;
+namespace SymbolGraph.Utilities.Parsers.Models;
 
 public class MetadataReferenceDetail
 {
