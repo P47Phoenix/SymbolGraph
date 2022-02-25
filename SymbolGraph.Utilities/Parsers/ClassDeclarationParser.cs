@@ -23,9 +23,7 @@ public class ClassDeclarationParser : IParser<ClassDeclarationSyntax, DocumentCl
             .ChildTokens()
             .OfType<PropertyDeclarationSyntax>()
             .ToList();
-        
-        
-
+     
         foreach (var propertyDeclarationSyntaxNode in propertyDeclarationSyntaxNodes)
         {
             var propertyDeclaration = await _propertyDeclarationParser.ParseAsync(propertyDeclarationSyntaxNode);

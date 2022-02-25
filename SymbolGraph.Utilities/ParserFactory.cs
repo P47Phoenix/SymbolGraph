@@ -1,28 +1,44 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 
 namespace SymbolGraph.Utilities;
 
 public class ParserFactory
 {
-    private static Lazy<IServiceProvider> _ParserCache = new Lazy<IServiceProvider>(
+    private static Lazy<IServiceProvider> _ParserCache = new (
         () =>
         {
             var serviceCollection = new ServiceCollection();
-            
+
             var parserInterface = typeof(IParser<,>);
 
             var types = parserInterface.Assembly.GetTypes();
 
             foreach (var type in types)
             {
-                if (type.IsAssignableTo(parserInterface))
+                var parserInterfaceInstance = type.GetInterface(parserInterface.Name);
+                if (parserInterfaceInstance != null)
                 {
-                    serviceCollection.AddSingleton(parserInterface, type);
+                    Log.Debug("Adding type of {type}", type.FullName);
+                    serviceCollection.AddSingleton(parserInterfaceInstance, type);
+                }
+                else
+                {
+                    Log.Debug("Skipping type of {type}", type.FullName);
                 }
             }
 
-            return serviceCollection.BuildServiceProvider();
+            try
+            {
+                return serviceCollection.BuildServiceProvider();
+            }
+            catch (ArgumentException argumentException)
+            {
+                Log.Error(argumentException, "Unable to BuildServiceProvider");
+                throw;
+            }
         });
+    
 
     
     public IParser<TParse, TResult> GetParser<TParse, TResult>()
